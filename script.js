@@ -18,7 +18,7 @@ function calculateGPA() {
     let units = parseFloat(unitInputs[i].value);
     console.log(units)
 
-    Check if the input values are valid numbers
+    // Check if the input values are valid numbers
     if (isNaN(grade) || isNaN(units)) {
       alert("Please enter valid numeric values.");
       return;
@@ -29,7 +29,7 @@ function calculateGPA() {
     console.log(totalUnits)
   }
 
-  Check if any input fields are empty
+  // Check if any input fields are empty
   if (totalUnits === 0) {
     alert("Please enter values for all input fields.");
     return;
