@@ -10,13 +10,14 @@ CalcBtn.onclick = (e) => {
 let totalGradePoints = 0;
 let totalUnits = 0;
 function calculateGPA() {
+  var totalGradePoints = 0;
+  var totalUnits = 0;
   var courseGradeInputs = document.getElementsByClassName("course-grade");
   var unitInputs = document.getElementsByClassName("unit");
 
-  for (let i = 0; i < courseGradeInputs.length; i++) {
-    let grade = parseFloat(courseGradeInputs[i].value);
-    let units = parseFloat(unitInputs[i].value);
-    console.log(units)
+  for (var i = 0; i < courseGradeInputs.length; i++) {
+    var grade = parseFloat(courseGradeInputs[i].value);
+    var units = parseFloat(unitInputs[i].value);
 
     // Check if the input values are valid numbers
     if (isNaN(grade) || isNaN(units)) {
@@ -26,7 +27,6 @@ function calculateGPA() {
 
     totalGradePoints += grade * units;
     totalUnits += units;
-    console.log(totalUnits)
   }
 
   // Check if any input fields are empty
@@ -36,6 +36,16 @@ function calculateGPA() {
   }
 
   var gpa = totalGradePoints / totalUnits;
+  var gradeLevel = "";
+
+  // Determine the grade level based on the GPA
+  if (gpa >= 70 && gpa <= 100) {
+    gradeLevel = "A";
+  } else if (gpa >= 60 && gpa < 70) {
+    gradeLevel = "B";
+  } else {
+    gradeLevel = "C";
+  }
 
   // Check if the calculated GPA is valid
   if (isNaN(gpa) || !isFinite(gpa)) {
@@ -43,5 +53,5 @@ function calculateGPA() {
     return;
   }
 
-  document.getElementById("result").innerHTML = "Your GPA is: " + gpa.toFixed(2);
+  document.getElementById("result").innerHTML = "Your GPA is: " + gpa.toFixed(2) + " (" + gradeLevel + ")";
 }
