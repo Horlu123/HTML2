@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
   <title>CGPA Calculator By Mayowa CPE</title>
   <style>
     body {
@@ -11,50 +11,58 @@
       padding: 0;
       background-color: #f2f2f2;
     }
+
     form {
       max-width: 600px;
       margin: 0 auto;
       padding: 20px;
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
     }
+
     h1 {
       text-align: center;
       color: #ff9900;
       text-shadow: 2px 2px #fff;
     }
+
     fieldset {
       border: none;
       padding: 0;
       margin: 0;
     }
+
     legend {
       font-size: 24px;
       font-weight: bold;
       color: #ff9900;
     }
+
     label {
       display: block;
       margin-bottom: 10px;
       font-weight: bold;
       color: #666;
     }
+
     input[type="number"] {
       padding: 5px;
       border: none;
       border-radius: 3px;
-      box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       margin-bottom: 10px;
       font-size: 16px;
       width: 100px;
       text-align: center;
       color: #333;
     }
+
     input[type="number"]:focus {
       outline: none;
       box-shadow: 0 0 5px #ff9900;
     }
+
     button[type="button"] {
       background-color: #ff9900;
       color: #fff;
@@ -63,14 +71,16 @@
       font-size: 18px;
       font-weight: bold;
       border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       transition: all 0.2s ease;
     }
+
     button[type="button"]:hover {
       background-color: #ffcc33;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
+
     #result {
       margin-top: 20px;
       text-align: center;
@@ -80,92 +90,93 @@
     }
   </style>
 </head>
+
 <body>
   <h1>CGPA Calculator By Mayowa CPE</h1>
-  <form>
-    <fieldset>
-      <legend>Enter Course Grades and Units</legend>
-      <div>
-        <label for="course1">Course 1 Grade:</label>
-        <input type="number" id="course1" name="course1" min="0" max="100" required>
-        <label for="unit1">Course 1 Unit:</label>
-        <input type="number" id="unit1" name="unit1" min="0" max="10" required>
-      </div>
-      <div>
-        <label for="course2">Course 2 Grade:</label>
-        <input type="number" id="course2" name="course2" min="0" max="100" required>
-        <label for="unit2">Course 2 Unit:</label>
-        <input type="number"id="unit2" name="unit2" min="0" max="10" required>
+  <form id="e-form">
+    <legend>Enter Course Grades and Units</legend>
+    <div>
+      <label for="course1">Course 1 Grade:</label>
+      <input type="number" class="course-grade" name="course1" min="0" max="100" required>
+      <label for="unit1">Course 1 Unit:</label>
+      <input type="number" class="unit" min="0" max="10" required>
     </div>
     <div>
-      <label for="course3">Course 3 Grade:</label>
-      <input type="number" id="course3" name="course3" min="0" max="100" required>
-      <label for="unit3">Course 3 Unit:</label>
-      <input type="number" id="unit3" name="unit3" min="0" max="10" required>
-    </div>
+      <label for="course2">Course 2 Grade:</label>
+      <input type="number" class="course-grade" name="course2" min="0" max="100" required>
+      <label for="unit2">Course 2 Unit:</label>
+      <input type="number"class="unit" min="0" max="10" required>
+  </div>
+  <div>
+    <label for="course3">Course 3 Grade:</label>
+    <input type="number" class="course-grade" name="course3" min="0" max="100">
+    <label for="unit3">Course 3 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
+  <div>
+    <label for="course4">Course 4 Grade:</label>
+    <input type="number" class="course-grade" name="course4" min="0" max="100">
+    <label for="unit4">Course 4 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
+  <div>
+    <label for="course5">Course 5 Grade:</label>
+    <input type="number" class="course-grade" name="course5" min="0" max="100">
+    <label for="unit5">Course 5 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
+  <div>
+    <label for="course6">Course 6 Grade:</label>
+    <input type="number" class="course-grade" name="course6" min="0" max="100">
+    <label for="unit6">Course 6 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
+  <div>
+    <label for="course7">Course 7 Grade:</label>
+    <input type="number" class="course-grade" name="course7" min="0" max="100">
+    <label for="unit7">Course 7 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
+  <div>
+    <label for="course8">Course 8 Grade:</label>
+    <input type="number" class="course-grade" name="course8" min="0" max="100">
+    <label for="unit8">Course 8 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
+  <div>
+    <label for="course9">Course 9 Grade:</label>
+    <input type="number" class="course-grade" name="course9" min="0" max="100">
+    <label for="unit9">Course 9 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
+  <div>
+    <label for="course10">Course 10 Grade:</label>
+    <input type="number" class="course-grade" name="course10" min="0" max="100">
+    <label for="unit10">Course 10 Unit:</label>
+    <input type="number" class="unit" min="0" max="10">
+  </div>
     <div>
-      <label for="course4">Course 4 Grade:</label>
-      <input type="number" id="course4" name="course4" min="0" max="100" required>
-      <label for="unit4">Course 4 Unit:</label>
-      <input type="number" id="unit4" name="unit4" min="0" max="10" required>
-    </div>
-    <div>
-      <label for="course5">Course 5 Grade:</label>
-      <input type="number" id="course5" name="course5" min="0" max="100" required>
-      <label for="unit5">Course 5 Unit:</label>
-      <input type="number" id="unit5" name="unit5" min="0" max="10" required>
-    </div>
-    <div>
-      <label for="course6">Course 6 Grade:</label>
-      <input type="number" id="course6" name="course6" min="0" max="100" required>
-      <label for="unit6">Course 6 Unit:</label>
-      <input type="number" id="unit6" name="unit6" min="0" max="10" required>
-    </div>
-    <div>
-      <label for="course7">Course 7 Grade:</label>
-      <input type="number" id="course7" name="course7" min="0" max="100" required>
-      <label for="unit7">Course 7 Unit:</label>
-      <input type="number" id="unit7" name="unit7" min="0" max="10" required>
-    </div>
-    <div>
-      <label for="course8">Course 8 Grade:</label>
-      <input type="number" id="course8" name="course8" min="0" max="100" required>
-      <label for="unit8">Course 8 Unit:</label>
-      <input type="number" id="unit8" name="unit8" min="0" max="10" required>
-    </div>
-    <div>
-      <label for="course9">Course 9 Grade:</label>
-      <input type="number" id="course9" name="course9" min="0" max="100" required>
-      <label for="unit9">Course 9 Unit:</label>
-      <input type="number" id="unit9" name="unit9" min="0" max="10" required>
-    </div>
-    <div>
-      <label for="course10">Course 10 Grade:</label>
-      <input type="number" id="course10" name="course10" min="0" max="100" required>
-      <label for="unit10">Course 10 Unit:</label>
-      <input type="number" id="unit10" name="unit10" min="0" max="10" required>
-    </div>
-    <div
-    <div>
-        <label for="course11">Course 11 Grade:</label>
-        <input type="number" id="course11" name="course11" min="0" max="100" required>
-        <label for="unit11">Course 11 Unit:</label>
-        <input type="number" id="unit11" name="unit11" min="0" max="10" required>
-      </div>
-
-      <!-- Submit button -->
-      <div>
-        <button id="calculate-button" onclick="calculateCGPA()">Calculate CGPA</button>
-      </div>
-
-    </form>
-
-    <!-- Output section -->
-    <div class="output">
-      <h2>Your CGPA:</h2>
-      <p id="result"></p>
+      <label for="">Course 11 Grade:</label>
+      <input type="number" class="course-grade" name="" min="0" max="100">
+      <label for="unit11">Course 11 Unit:</label>
+      <input type="number" class="unit" name="unit11" min="0" max="10">
     </div>
 
-    <script src="app.js"></script>
-  </body>
+    <!-- Submit button -->
+    <div>
+      <button id="calculate-button">Calculate CGPA</button>
+    </div>
+
+  </form>
+
+  <!-- Output section -->
+  <div class="output">
+    <h2>Your CGPA:</h2>
+    <p id="result"></p>
+  </div>
+
+  <!-- <script src="app.js"></script> -->
+  <script src="script.js"></script>
+</body>
+
 </html>
