@@ -1,0 +1,57 @@
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 2px solid #1e90ff;
+    border-radius: 10px;
+    background-color: #87cefa;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 5em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .square:hover {
+    background-color: #add8e6;
+  }
+  
+  .x {
+    color: #1e90ff;
+    text-shadow: 1px 1px white;
+  }
+  
+  .o {
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #1e90ff;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #104e8b;
+  }
+  

@@ -29,7 +29,7 @@ function calculateGPA() {
     console.log(totalUnits)
   }
 
-  Check if any input fields are empty
+  //Check if any input fields are empty
   if (totalUnits === 0) {
     alert("Please enter values for all input fields.");
     return;
